@@ -6,7 +6,7 @@ void function(double **A, int n)
     for (int i = 1; i <= 4; i++)
     {
         char filename[50];
-        sprintf(filename, "hw1-Pavankumarshinde/inputfiles/vec_%06d_%06d.in", n, i);
+        sprintf(filename, "inputfiles/vec_%06d_%06d.in", n, i);
 
         FILE *filePtr = fopen(filename, "r");
         if (filePtr == NULL)
@@ -76,7 +76,7 @@ void function(double **A, int n)
 
 int main()
 {
-    FILE *file = fopen("C:/Users/shind/parallelComputing/input.in", "r");
+    FILE *file = fopen("input.in", "r");
     if (file == NULL)
     {
         printf("Error opening input file.\n");
@@ -105,7 +105,7 @@ int main()
     }
 
     char filename[50];
-    sprintf(filename, "hw1-Pavankumarshinde/inputfiles/mat_%06d.in", n);
+    sprintf(filename, "inputfiles/mat_%06d.in", n);
     FILE *filePtr = fopen(filename, "r");
     if (filePtr == NULL)
     {
