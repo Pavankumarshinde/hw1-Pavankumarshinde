@@ -9,7 +9,7 @@ void print_to_file(int n, double **A, bool format_flag)
 
     if (format_flag == true)
     {
-        sprintf(filename, "array%06d_%s.out", n, "bin");
+        sprintf(filename, "output/array%06d_%s.out", n, "bin");
         output = fopen(filename, "wb");
         if (output == NULL)
         {
@@ -23,7 +23,7 @@ void print_to_file(int n, double **A, bool format_flag)
     }
     else
     {
-        sprintf(filename, "array%06d_%s.out", n, "asc");
+        sprintf(filename, "output/array%06d_%s.out", n, "asc");
         output = fopen(filename, "w");
         if (output == NULL)
         {
