@@ -1,0 +1,38 @@
+(a) Run the code corresponding to Question No. 6 from HW0 for n = 4000
+with ‘format flag’ equal to 0 and then equal to 1. Report the sizes in
+MB of the two files that are generated (you can use the command ‘du
+–sh {filename}’).
+
+Ans:
+array00400_asc.out : size on disk = 319 MB (33,55,03,360 bytes)
+array00400_bin.out : size on disk = 122 MB (12,80,00,000 bytes)
+
+
+(b)Estimate the size of the array in memory by multiplying the size of
+one double (8 bytes) with the number of doubles (n^2)in the array.
+Comment on the size in memory vs size on disk for the above two files.
+Comment on which format is best suited for saving large data.
+
+
+Answer :
+---> Estimated size :
+ --> size of double 8 bytes
+ --> total memory required : n*n *8 bytes = 8×16,000,000=128,000,000 B =122.0703125 MB
+
+
+ Comments :
+
+ > Binary file(bin) : size on the disk(122.1 MB) matches exactly with Estimated size as it stores the raw data without extra formatting.
+ >ASCII file (asc): The size (319.9 MB) is significantly larger because -->
+    1.Conversion of binary values to human-readable decimal strings.
+    2.Extra characters like spaces and newline characters
+    3.Higher precision representation (15 decimal places).
+
+So I can conclude that , it is better to store data in bin file as It requires significantly less space than ASCII and Faster read/write operations as no conversion is needed.
+ASCII format (asc) is better when data needs to be human-readable but is inefficient for large datasets due to size and slower performance.
+
+
+Question2. 
+A*v= {lambda} * v
+ A*v -->y
+ 
